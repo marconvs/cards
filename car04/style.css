@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --bg-color: #f84040;
+    --fraco: #fff2;
+    --cor2: rgba(177, 177, 177, 0.2);
+    --cor3: rgba(255, 255, 255, 0.15);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .glass{
+    position: relative;
+    width: 300px;
+    height: 280px;
+    background: linear-gradient(var(--fraco), transparent);
+    border: 1px solid var(--cor2);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 1em;
+    margin: 0 -120px;
+    overflow: hidden;
+    transform: rotate(calc(var(--r) * 1deg));
+    cursor: pointer;
+}
+
+.container:hover .glass{
+    transform: rotate(0deg);
+    margin: 0 10px;
+}
+
+.container .glass::before{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: var(--cor3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.container .glass i{
+    font-size: 8em;
+    color: white;
+}
