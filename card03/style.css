@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --azul: #2A4CA5;
+    --preto: #000000;
+    --branco: #fff;
+}
+
+*{ 
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--preto);
+    overflow: hidden;
+}
+
+h5{
+    margin-top: 100px;
+    margin-left: 100px;
+    color: var(--azul);
+    letter-spacing: 1.5px;
+}
+
+h1{
+    font-size: 60px;
+    color: var(--branco);
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.box{
+    width: 250px;
+    height: 250px;
+    padding: 50px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #e6e6e6, #ffff);
+    
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box:hover{
+    background: linear-gradient(145deg, black, var(--azul));
+    box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffff;
+}
+
+.icons{
+    font-size: 50px;
+    color: var(--azul);
+    margin-top: 10px;
+}
+
+.box:hover .icons{
+    margin-top: 0px;
+    color: #fff;
+}
+
+.box h2{
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.box:hover h2{
+    color: #fff;
+}
+
+.box p{
+  color:gray;
+  font-weight: 400;
+  margin-top: 25px;  
+}
+
+.box:hover p{
+    color: #fff;
+}
+
+.arrow{
+    font-size: 30px;
+    color: var(--azul);
+    marker-start: 40px;
+    display: none;
+}
+
+.box:hover .arrow{
+    color: #fff;
+    margin-top: 10px;
+    display: block;
+
+}
